@@ -71,7 +71,7 @@ The nine built-in data types in Java:
 | _long_ | 64-bit signed integers | + - * / % | - $2^{63}$, $(2^{63} - 1)$, 0, -6, 6 |
 | _float_ | single-precision floating point (6 to 7 decimal digits) | + - * / | 3.14, 2.5, 6.022e23 |
 | _double_ | double-precision floating point (15 to 16 decimal digits) | + - * / | 3.14, 2.5, 6.022e23 |
-| _boolean_ | true or false | && || ! | true, false |
+| _boolean_ | true or false | && \|\| ! | true, false |
 | _char_ | characters |  | 'A', 'a', '&', '\n' |
 | _String_ | sequences of characters | + | "AB", "Hello", "2.5" |
 
