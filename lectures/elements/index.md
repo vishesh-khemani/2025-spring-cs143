@@ -66,9 +66,9 @@ The nine built-in data types in Java:
 | type | set of values | common operators | sample values |
 | --- | --- | --- | --- |
 | _byte_ | 8-bit signed integers | + - * / % | -128, 127, 0, -6, 6 | 
-| _short_ | 16-bit signed integers | + - * / % | -$2^{15}$, $(2^{15} - 1)$, 0, -6, 6 |
-| _int_ | 32-bit signed integers | + - * / % | -$2^{31}$, $(2^{31} - 1)$, 0, -6, 6 |
-| _long_ | 64-bit signed integers | + - * / % | -$2^{63}$, $(2^{63} - 1)$, 0, -6, 6 |
+| _short_ | 16-bit signed integers | + - * / % | - $2^{15}$, $(2^{15} - 1)$, 0, -6, 6 |
+| _int_ | 32-bit signed integers | + - * / % | - $2^{31}$, $(2^{31} - 1)$, 0, -6, 6 |
+| _long_ | 64-bit signed integers | + - * / % | - $2^{63}$, $(2^{63} - 1)$, 0, -6, 6 |
 | _float_ | single-precision floating point (6 to 7 decimal digits) | + - * / | 3.14, 2.5, 6.022e23 |
 | _double_ | double-precision floating point (15 to 16 decimal digits) | + - * / | 3.14, 2.5, 6.022e23 |
 | _boolean_ | true or false | && || ! | true, false |
