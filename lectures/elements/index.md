@@ -1,5 +1,14 @@
 # [CS143](../index.md): Elements of Programming
 
+- [CS143: Elements of Programming](#cs143-elements-of-programming)
+  - [Your First Program](#your-first-program)
+  - [Command-line Args](#command-line-args)
+  - [Built-in Data Types](#built-in-data-types)
+    - [Terminology](#terminology)
+    - [Tracing](#tracing)
+  - [Conditionals and Loops](#conditionals-and-loops)
+
+
 ## Your First Program
 
 ![write-compile-run](ecc4cfacd1f05a068fa75a25de45fe76.jpeg.avif)
@@ -72,19 +81,81 @@ The nine built-in data types in Java:
 | _float_ | single-precision floating point (6 to 7 decimal digits) | + - * / | 3.14, 2.5, 6.022e23 |
 | _double_ | double-precision floating point (15 to 16 decimal digits) | + - * / | 3.14, 2.5, 6.022e23 |
 | _boolean_ | true or false | && \|\| ! | true, false |
-| _char_ | characters |  | 'A', 'a', '&', '\n' |
-| _String_ | sequences of characters | + | "AB", "Hello", "2.5" |
+| _char_ | characters (16 bits Unicode) |  | 'A', 'a', '&', '\n' |
+| _String_ | sequences of characters | + (concatenate) | "AB", "Hello", "2.5" |
 
 _String_ is the only built-in data type that is not a primitive data type (note the capital 'S').
 
 > A **primitive** data type is such that a variable of that type stores the data type value itself (as opposed to a reference/pointer).
 
-Some terminology around data types:
+### Terminology 
 
-| Term | Meaning | Examples |
-| --- | --- | --- |
-| Literal | Code representation of a data type value | _42_ (for int), _true_ (for boolean) |
-| Operator | Code representation of a data type operation | _+_ (addition of number types), _&&_ (boolean and) |
-| Identifier | Code representation of a name (e.g. for a variable) | _abc_, _Ab$_, _x1_ |
-| Variable | An identifier that holds a data type value that may change | _abc_ of type int can store any int value |
-| Declaration | Statement that creates a variable | `double total;` | 
+```java
+int a;
+```
+
+**Declaration** of the **variable** named _a_ which holds an _int_ data-type value. The value may change as the program proceeds.
+
+---
+
+```java
+int a;
+a = 1234;
+```
+
+**Literal** _1234_ is the Java-code representation of an _int_ data-type value. 
+
+**Assignment** of the _int_ data-type value _1234_ to the variable named _a_.
+
+---
+
+```java
+int a;
+a = 1234;
+int c = a + 99;
+```
+
+**Operator** '$+$' is the Java-code respresentation of an _int_ data-type operation. 
+
+**Expression** $a+b$ is a combination of literals, variables, and operators that Java evaluates to produce a data-type value.
+
+**Type safety**: an expression in Java can only contain values and operations of the same data-type.
+
+Variable _c_ is **inline initialized** by combining its declaration with its assignment.
+
+### Tracing
+
+```java
+int a = 1234;
+int b = 99;
+int t = a;
+a = b;
+b = t;
+```
+
+What does the above program do?
+
+**Trace** or **dry-run** of the program:
+| | a | b | t |
+| --- | --- | --- | --- |
+| `int a = 1234;` | **1234** | undefined | undefined |
+| `int b = 99;` | 1234 | **99** | undefined |
+| `int t = a;` | 1234 | 99 | **1234** |
+| `a = b;` | **99** | 99 | 1234 |
+| `b = t;` | 99 | **1234** | 1234 |
+
+<details>
+
+<summary>Exercises</summary>
+
+1. Write a program that outputs the values of $x$ that satisfy the quadratic equation $a x^2 + b x + c = 0$. The program should take as  input three command-line arguments denoting $a, b, c$. The program can use the quadratic formula $x = \frac{-b \pm \sqrt{b^2 - 4 a c}}{2 a}$.
+
+2. Write a program that outputs whether  an integer corresponds to a leap year. A non-century year is a leap year if it is divisible by 4. A century year is a leap year if it is divisible by 400.
+
+1. Write a program that calculates and prints the amount of money you would have after $t$ years if you invested $P$ dollars at an annual interest rate $r$ (compounded continuously). You can use the formula $P e^{r t}$.
+
+1. Write a program that outputs the effective temperature (wind chill) $w$, given the actual temperature $T$ (in degrees Farenheit) and the wind speed $v$ (in miles per hour). You can use the formula $w = 35.74 + 0.6215 T + (0.4275 T - 35.75) v^{0.16}$ for reasonable values of $T$ ($< 50$) and $v$ ($3 < v < 120$).
+
+</details>
+
+## Conditionals and Loops
