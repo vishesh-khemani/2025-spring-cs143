@@ -6,7 +6,8 @@ These are lecture notes for CS 143 (LWTech, Spring 2025) prepared by Vishesh Khe
 The notes are based heavily on the textbook "Introduction to Programming in Java" by Robert Sedgewick and Kevin Wayne.
 
 - [Elements of Programming](elements/index.md)
+- ...
 
 ---
 
-![](https://plus.pearson.com/epub/bronte/BRNT-6EL9KMLCZGU/v7/OPS/images/832852685935ec9b72d2a4310c14a54c.jpeg)
+![alt text](<Screenshot 2025-03-14 at 2.39.29 PM.png>)
